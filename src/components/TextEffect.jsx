@@ -13,7 +13,7 @@ const defaultContainerVariants = {
   },
 };
 
-const createItemVariants = (duration = 0.0001, ease = "easeOut") => ({
+const createItemVariants = (duration = 0.01, ease = "easeOut") => ({
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,

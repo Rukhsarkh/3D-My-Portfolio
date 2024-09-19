@@ -2,6 +2,7 @@ import { useMediaQuery } from "react-responsive";
 import { Dock, DockIcon, DockItem, DockLabel } from "./Dock.jsx";
 import { Dock2, DockIcon2, DockItem2, DockLabel2 } from "./Dock2.jsx";
 import React from "react";
+import { TextEffect } from "./TextEffect.jsx";
 
 const data = [
   {
@@ -130,9 +131,9 @@ const TechStack = () => {
   });
 
   return (
-    <section className="w-full min-h-80 grid grid-wrap grid-cols-2 c-space p-2 gap-3 sm:mt-13 mt-1">
-
-        <div className="grid-container">
+    <section className="w-full min-h-80 grid grid-wrap grid-cols-2 c-space p-2 gap-3 sm:mt-13 mt-10">
+      <div className="max-h-full">
+      <div className="grid-container">
           <p className="className='mx-auto text-white sm:text-5xl text-2xl font-medium hero_tag text-gray_gradient p-3 border-2 border-white rounded-md grid-subtext'">
             Tech Stack
           </p>
@@ -140,26 +141,28 @@ const TechStack = () => {
         
           {/* teach you through portfolio */}
           <div className="grid-container justify-between grid grid-rows-2 gap-2">
-            <p className="grid-subtext">
-             ❛❛ I specialize in a variety of languages, frameworks, and tools that
+            <p className="grid-subtext text-justify">
+             ❛❛ I worked with a variety of frameworks, and tools that
               allow me to build robust and scalable applications ❜❜
             </p>
             <p className="grid-subtext grid grid-rows-2 gap-4">
-              <ul>As a Frontend Dev ⟶
+              <ul>As a <span className="span-class">Frontend</span> Dev ⟶
                 <li>⟶  Working with 3-D Visuals Libraries</li>
                 <li>⟶  Developing Engaging U - Interfaces</li>
                 <li>⟶  Making Responsive & Pixel Perfect Ui's</li>
               </ul>
 
-              <ul>As a Backend Dev ⟶
-                <li>⟶ Bridging gap btw innovation & Application</li>
+              <ul>As a <span className="span-class">Backend</span> Dev ⟶
+                <li>⟶ Bridging gap b/w innovation & Application</li>
                 <li>⟶ Levaraging Ai Toolings</li>
                 <li>⟶ Building Scalable Solutions </li>
               </ul>
             </p>
           </div>
         </div>
- 
+      </div>
+        
+
         <TechStackGrid/>
     </section>
   );

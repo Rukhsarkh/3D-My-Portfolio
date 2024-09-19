@@ -11,6 +11,7 @@ const Projects = () => {
                     <li>2. Word with Anon</li>
                     <li>3. Text Sentimental Analyzer </li>
                     <li>4. Saas Website</li>
+                    <li>5. React Component to scale certain whole div element on screen while user scrolls to that portion</li>
                 </ul>
             </div>
         </section>

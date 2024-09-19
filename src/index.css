@@ -149,6 +149,10 @@ body {
   .social-icon {
     @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200;
   }
+
+  .span-class {
+    @apply text-xl text-black font-extrabold border-2 border-green-500 rounded p-1 hover:cursor-pointer bg-green-200 inline-block hover:scale-150 transition-transform duration-300 ease-in-out;
+  }
 }
 
 .waving-hand {
