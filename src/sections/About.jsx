@@ -39,22 +39,28 @@ const SVGComponent = () => {
 
 const About = () => {
   return (
-      <section className='max-w-xl max-h-80 flex flex-row relative c-space left-0'>
-        <div className='sm:max-w-xl max-w-full'>
-          <div className='grid-container'>
-              <p className="className='mx-auto text-white sm:text-5xl text-2xl font-medium hero_tag text-gray_gradient p-3 border-2 border-white rounded-md grid-subtext'">Overview</p>
-              <div className='font-thin text-3xl text-white text-justify'>
-                  {/* <TextEffect per='word' as='h3' preset='shake'> ⟶  Building full Stack Web Applications</TextEffect>
-                  <TextEffect per='word' as='h3' preset='shake'> ⟶  Working with 3-D Visuals Libraries</TextEffect>
-                  <TextEffect per='word' as='h3' preset='shake'> ⟶  Developing Engaging U - Interfaces</TextEffect>
-                  <TextEffect per='word' as='h3' preset='shake'> ⟶  Making Responsive & Pixel Perfect Ui's</TextEffect> */}
-                  <TextEffect per='word' as='h3' preset='slide'> ❛❛ Bridging Gap between Innovation & Application by Levaraging AI Toolings ❜❜</TextEffect>
-              </div>
-            </div>
-        </div>
+      // <section className='max-w-xl max-h-80 flex flex-row relative c-space left-0'>
+      //   <div className='sm:max-w-xl max-w-full'>
+      //     <div className='grid-container'>
+      //         <p className="className='mx-auto text-white sm:text-5xl text-2xl font-medium hero_tag text-gray_gradient p-3 border-2 border-white rounded-md grid-subtext'">Overview</p>
+      //         <div className='font-thin text-3xl text-white text-justify'>
+      //             {/* <TextEffect per='word' as='h3' preset='shake'> ⟶  Building full Stack Web Applications</TextEffect>
+      //             <TextEffect per='word' as='h3' preset='shake'> ⟶  Working with 3-D Visuals Libraries</TextEffect>
+      //             <TextEffect per='word' as='h3' preset='shake'> ⟶  Developing Engaging U - Interfaces</TextEffect>
+      //             <TextEffect per='word' as='h3' preset='shake'> ⟶  Making Responsive & Pixel Perfect Ui's</TextEffect> */}
+      //             <TextEffect per='word' as='h3' preset='slide'> ❛❛ Bridging Gap between Innovation & Application by Levaraging AI Toolings ❜❜</TextEffect>
+      //         </div>
+      //       </div>
+      //   </div>
 
-        <SVGComponent/>
+      //   <SVGComponent/>
         
+      // </section>
+
+      <section className='c-space m-20'>
+            <p className='text-white md:text-5xl text-6xl font-thin md:text-right text-justify'>
+              <TextEffect per='word' as='h3' preset='fade'>Connecting STRUCTURES AND FUNCTIONS</TextEffect>
+            </p>
       </section>
   );
 };

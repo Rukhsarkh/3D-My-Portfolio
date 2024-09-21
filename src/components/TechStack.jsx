@@ -107,11 +107,12 @@ const MernStackDock = () => {
 
 const TechStackGrid = () => {
   return (
+    <div className="col-span-1 xl:row-span-3">
       <div className="grid-container">
-        <div className="flex flex-row flex-wrap justify-between gap-1">
+        {/* <div className="flex flex-row md:flex-wrap gap-1">
           {data.map((item) => (
             <div key={item.id}>
-              <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden border-2 border-gray-500 shadow-lg hover:shadow-xl hover:scale-150 transition-transform duration-300 ease-in-out hover:cursor-pointer">
+              <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden border-2 border-gray-500 shadow-lg hover:shadow-xl hover:scale-150 transition-transform duration-300 ease-in-out hover:cursor-pointer w-full sm:h-[276px] h-fit">
                 {React.cloneElement(item.icon, {
                   className: "w-full h-full object-contain",
                   alt: item.title,
@@ -119,53 +120,108 @@ const TechStackGrid = () => {
               </div>
             </div>
           ))}
+        </div> */}
+        <div className="grid xl:grid-cols-3 xl:grid-row-4 md:grid-cols-2 grid-cols-1">
+          {data.map((item) => (
+              <div key={item.id}>
+                <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden border-2 border-gray-500 shadow-lg hover:shadow-xl hover:scale-150 transition-transform duration-300 ease-in-out hover:cursor-pointer w-full sm:h-[276px] h-fit">
+                  {React.cloneElement(item.icon, {
+                    className: "w-full h-full object-contain",
+                    alt: item.title,
+                  })}
+                </div>
+              </div>
+            ))}
         </div>
       </div>
+    </div>
   );
 };
 
 const TechStack = () => {
-  const isMobile = useMediaQuery({ query: "min-width: 832px" });
-  const isTablet = useMediaQuery({
-    query: ("min-width: 832px", "max-width: 1024px"),
-  });
 
-  return (
-    <section className="w-full min-h-80 grid grid-wrap grid-cols-2 c-space p-2 gap-3 sm:mt-13 mt-10">
-      <div className="max-h-full">
-      <div className="grid-container">
-          <p className="className='mx-auto text-white sm:text-5xl text-2xl font-medium hero_tag text-gray_gradient p-3 border-2 border-white rounded-md grid-subtext'">
-            Tech Stack
-          </p>
+  // return (
+  //   <section className="w-full min-h-80 grid grid-wrap grid-cols-2 c-space p-2 gap-3 sm:mt-13 mt-10">
+  //     <div className="max-h-full">
+  //     <div className="grid-container">
+  //         <p className="className='mx-auto text-white sm:text-5xl text-2xl font-medium hero_tag text-gray_gradient p-3 border-2 border-white rounded-md grid-subtext'">
+  //           Tech Stack
+  //         </p>
 
         
-          {/* teach you through portfolio */}
-          <div className="grid-container justify-between grid grid-rows-2 gap-2">
-            <p className="grid-subtext text-justify">
-             ❛❛ I worked with a variety of frameworks, and tools that
-              allow me to build robust and scalable applications ❜❜
-            </p>
-            <p className="grid-subtext grid grid-rows-2 gap-4">
-              <ul>As a <span className="span-class">Frontend</span> Dev ⟶
-                <li>⟶  Working with 3-D Visuals Libraries</li>
-                <li>⟶  Developing Engaging U - Interfaces</li>
-                <li>⟶  Making Responsive & Pixel Perfect Ui's</li>
-              </ul>
+  //         {/* teach you through portfolio */}
+  //         <div className="grid-container justify-between grid grid-rows-2 gap-2">
+  //           <p className="grid-subtext text-justify">
+  //            ❛❛ I worked with a variety of frameworks, and tools that
+  //             allow me to build robust and scalable applications ❜❜
+  //           </p>
+  //           <p className="grid-subtext grid grid-rows-2 gap-4">
+  //             <ul>As a <span className="span-class">Frontend</span> Dev ⟶
+  //               <li>⟶  Working with 3-D Visuals Libraries</li>
+  //               <li>⟶  Developing Engaging U - Interfaces</li>
+  //               <li>⟶  Making Responsive & Pixel Perfect Ui's</li>
+  //             </ul>
 
-              <ul>As a <span className="span-class">Backend</span> Dev ⟶
-                <li>⟶ Bridging gap b/w innovation & Application</li>
-                <li>⟶ Levaraging Ai Toolings</li>
-                <li>⟶ Building Scalable Solutions </li>
-              </ul>
+  //             <ul>As a <span className="span-class">Backend</span> Dev ⟶
+  //               <li>⟶ Bridging gap b/w innovation & Application</li>
+  //               <li>⟶ Levaraging Ai Toolings</li>
+  //               <li>⟶ Building Scalable Solutions </li>
+  //             </ul>
+  //           </p>
+  //         </div>
+  //       </div>
+  //     </div>
+  //       <TechStackGrid/>
+  //   </section>
+  // );
+
+  return(
+    <section className="c-space my-20">
+      <div className="grid md:grid-cols-2 md:grid-rows-6 grid-cols-1 gap-5 h-full">
+        <div className="col-span-1 md:row-span-3">
+          <div className="grid-container">
+            <p className="className='mx-auto text-white sm:text-5xl text-2xl font-medium hero_tag text-gray_gradient p-3 border-2 border-white rounded-md grid-subtext'">
+              Tech Stack
             </p>
+
+            <TechStackGrid/>
+
+            {/* <div className="grid md:grid-cols-2 grid-cols-1 h-full gap-5">
+              <div className="border-2 border-gray-400 rounded-lg p-1">
+                <p className="grid-headtext">
+                As a <span className="span-class">Frontend</span> Dev ⟶
+                </p>
+                <p className="grid-subtext">
+                  <p>⟶ Working with 3-D Visuals Libraries</p>
+                  <p>⟶ Developing Engaging Ui's</p>
+                  <p>⟶ Making Responsive & Pixel Perfect Ui's</p>
+                </p>
+              </div>
+
+              <div className="border-2 border-gray-400 rounded-lg p-1">
+                <p className="grid-headtext">
+                As a <span className="span-class">Backend</span> Dev ⟶
+                </p>
+                <p className="grid-subtext">
+                <p>⟶ Designing RESTful APIs with CRUD operations</p>
+                <p>⟶ Architecting efficient database schemas</p>
+                <p>⟶ Implementing robust server-side validation and error handling</p>
+                <p>⟶ Integrating third-party services (Maps, OpenAI), Managing cloud-based file storage solutions</p>
+                </p>
+              </div>
+            </div> */}
+
+            {/* <div className="h-full w-full text-white text-5xl">
+              <p className="font-thin text-white text-3xl text-justify">
+                ❛❛ Connecting <span className="decoration-white">FORM & FUNCTION</span> ❜❜
+              </p>
+            </div> */}
           </div>
         </div>
       </div>
-        
 
-        <TechStackGrid/>
     </section>
-  );
+  )
 };
 
 export default TechStack;
