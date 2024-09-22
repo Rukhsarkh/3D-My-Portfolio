@@ -5,6 +5,8 @@ export default {
     extend: {
       fontFamily: {
         generalsans: ['General Sans', 'sans-serif'],
+        medieval: ['MedievalSharp', 'cursive'],
+        custom: ['spongeFont', 'sans-serif'],
       },
       colors: {
         black: {

@@ -5,6 +5,7 @@ import About from './sections/About'
 import Projects from './sections/Projects'
 import Contact from './sections/Contact'
 import TechStack from './components/TechStack'
+import './fonts.css'
 
 const App = () => {
   return (

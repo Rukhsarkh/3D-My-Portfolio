@@ -1,227 +1,67 @@
-import { useMediaQuery } from "react-responsive";
-import { Dock, DockIcon, DockItem, DockLabel } from "./Dock.jsx";
-import { Dock2, DockIcon2, DockItem2, DockLabel2 } from "./Dock2.jsx";
 import React from "react";
 import { TextEffect } from "./TextEffect.jsx";
+import { techStackes } from "../constants/index.jsx";
 
-const data = [
-  {
-    title: "JavaScript",
-    icon: <img src="public/TechStack/js.png" />,
-    id: "1",
-  },
-  {
-    title: "TypeScript",
-    icon: <img src="public/TechStack/TS.png" />,
-    id: "4",
-  },
-  {
-    title: "Java",
-    icon: <img src="public/TechStack/java.png"></img>,
-    id: "2",
-  },
-  {
-    title: "CSS3",
-    icon: <img src="public/TechStack/css.png"></img>,
-    id: "2",
-  },
-  {
-    title: "Tailwind Css",
-    icon: <img src="public/TechStack/tailwindCSS.png" />,
-    id: "3",
-  },
-  {
-    title: "Shadcn Ui",
-    icon: <img src="public/TechStack/shadcn.png" />,
-    id: "5",
-  },
-  {
-    title: "Redux",
-    icon: <img src="public/TechStack/redux.png"></img>,
-    id: "13",
-  },
-  {
-    title: "SQL",
-    icon: <img src="public/TechStack/SQL.png"></img>,
-    id: "15"
-  },
-  {
-    title: "MongoDB",
-    icon: <img src="public/TechStack/mongoDB.png" />,
-    id: "7",
-  },
-  {
-    title: "Express.js",
-    icon: <img src="public/TechStack/expressjs.png" />,
-    id: "8",
-  },
-  {
-    title: "React.js",
-    icon: <img src="public/TechStack/reactlogo.png" />,
-    id: "6",
-  },
-  {
-    title: "Node.js",
-    icon: <img src="public/TechStack/nodejs.png" />,
-    id: "9",
-  },
-  {
-    title: "Next.js",
-    icon: <img src="public/Techstack/nextjs.png"></img>,
-    id: "10",
-  },
-  {
-    title: "NextAuth",
-    icon: <img src="public/TechStack/nextAuth.png"></img>,
-    id: "15"
-  },
-  {
-    title: "Three.js",
-    icon: <img src="public/TechStack/threejs.png"></img>,
-    id: "11",
-  },
-  {
-    title: "GSAP",
-    icon: <img src="public/TechStack/gsap.jpg"></img>,
-    id: "12",
-  },
-];
-
-const MernStackDock = () => {
+const TechStackGrid = () => {
   return (
-    <div className="absolute sm:bottom-1 bottom-20 left-1/2 max-w-full -translate-x-1/2">
-      <Dock className="items-end pb-3 bg-blue-700 dark:bg-blue-700">
-        {data.map((item, id) => (
-          <DockItem
-            key={id}
-            className="aspect-square rounded-full bg-white shadow-lg"
-          >
-            <DockLabel>{item.title}</DockLabel>
-            <DockIcon>{item.icon}</DockIcon>
-          </DockItem>
-        ))}
-      </Dock>
+    <div className="grid grid-cols-4 gap-1">
+      {techStackes.map((item) => (
+        <div key={item.id}>
+          <div className="h-full w-full rounded-full overflow-hidden border-2 border-gray-500 shadow-lg hover:shadow-xl hover:scale-150 transition-transform duration-300 ease-in-out hover:cursor-pointer">
+            {React.cloneElement(item.icon, {
+              className: "w-full h-full object-contain",
+              alt: item.title,
+            })}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
 
-const TechStackGrid = () => {
+const SpeechBubble = ({ children }) => {
   return (
-    <div className="col-span-1 xl:row-span-3">
-      <div className="grid-container">
-        {/* <div className="flex flex-row md:flex-wrap gap-1">
-          {data.map((item) => (
-            <div key={item.id}>
-              <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden border-2 border-gray-500 shadow-lg hover:shadow-xl hover:scale-150 transition-transform duration-300 ease-in-out hover:cursor-pointer w-full sm:h-[276px] h-fit">
-                {React.cloneElement(item.icon, {
-                  className: "w-full h-full object-contain",
-                  alt: item.title,
-                })}
-              </div>
-            </div>
-          ))}
-        </div> */}
-        <div className="grid xl:grid-cols-3 xl:grid-row-4 md:grid-cols-2 grid-cols-1">
-          {data.map((item) => (
-              <div key={item.id}>
-                <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden border-2 border-gray-500 shadow-lg hover:shadow-xl hover:scale-150 transition-transform duration-300 ease-in-out hover:cursor-pointer w-full sm:h-[276px] h-fit">
-                  {React.cloneElement(item.icon, {
-                    className: "w-full h-full object-contain",
-                    alt: item.title,
-                  })}
-                </div>
-              </div>
-            ))}
+    <div className="relative max-w-xs mx-auto">
+      <div className="bg-white border-2 border-gray-300 rounded-full p-4 relative">
+        <div className="transform -rotate-1 origin-bottom-left">
+          {children}
         </div>
+        <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 rotate-45 w-4 h-4 bg-white border-r-2 border-b-2 border-gray-300"></div>
       </div>
     </div>
   );
 };
 
 const TechStack = () => {
-
-  // return (
-  //   <section className="w-full min-h-80 grid grid-wrap grid-cols-2 c-space p-2 gap-3 sm:mt-13 mt-10">
-  //     <div className="max-h-full">
-  //     <div className="grid-container">
-  //         <p className="className='mx-auto text-white sm:text-5xl text-2xl font-medium hero_tag text-gray_gradient p-3 border-2 border-white rounded-md grid-subtext'">
-  //           Tech Stack
-  //         </p>
-
-        
-  //         {/* teach you through portfolio */}
-  //         <div className="grid-container justify-between grid grid-rows-2 gap-2">
-  //           <p className="grid-subtext text-justify">
-  //            ❛❛ I worked with a variety of frameworks, and tools that
-  //             allow me to build robust and scalable applications ❜❜
-  //           </p>
-  //           <p className="grid-subtext grid grid-rows-2 gap-4">
-  //             <ul>As a <span className="span-class">Frontend</span> Dev ⟶
-  //               <li>⟶  Working with 3-D Visuals Libraries</li>
-  //               <li>⟶  Developing Engaging U - Interfaces</li>
-  //               <li>⟶  Making Responsive & Pixel Perfect Ui's</li>
-  //             </ul>
-
-  //             <ul>As a <span className="span-class">Backend</span> Dev ⟶
-  //               <li>⟶ Bridging gap b/w innovation & Application</li>
-  //               <li>⟶ Levaraging Ai Toolings</li>
-  //               <li>⟶ Building Scalable Solutions </li>
-  //             </ul>
-  //           </p>
-  //         </div>
-  //       </div>
-  //     </div>
-  //       <TechStackGrid/>
-  //   </section>
-  // );
-
-  return(
+  return (
     <section className="c-space my-20">
-      <div className="grid md:grid-cols-2 md:grid-rows-6 grid-cols-1 gap-5 h-full">
-        <div className="col-span-1 md:row-span-3">
-          <div className="grid-container">
+      <div className="grid xl:grid-cols-2 xl:grid-rows-4 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+        <div className="col-span-1 xl:row-span-3">
+          <div className="grid-container bg-[url('assets/spotlight3.png')] bg-cover">
             <p className="className='mx-auto text-white sm:text-5xl text-2xl font-medium hero_tag text-gray_gradient p-3 border-2 border-white rounded-md grid-subtext'">
               Tech Stack
             </p>
+            <TechStackGrid />
+          </div>
+        </div>
 
-            <TechStackGrid/>
+        <div className="col-span-1 xl:row-span-3">
+          <div className=" grid-container bg-[url('assets/batman7.jpg')] bg-cover">
+            <p className="className='mx-auto text-white sm:text-5xl text-2xl font-medium hero_tag p-3 border-2 border-white rounded-md grid-subtext'">
+              Howdy ! This is Rukh
+            </p>
+            {/* <h1 className="text-4xl font-custom text-gray_gradient text-center">
+              imma introvert Yapper!!!
+            </h1> */}
 
-            {/* <div className="grid md:grid-cols-2 grid-cols-1 h-full gap-5">
-              <div className="border-2 border-gray-400 rounded-lg p-1">
-                <p className="grid-headtext">
-                As a <span className="span-class">Frontend</span> Dev ⟶
-                </p>
-                <p className="grid-subtext">
-                  <p>⟶ Working with 3-D Visuals Libraries</p>
-                  <p>⟶ Developing Engaging Ui's</p>
-                  <p>⟶ Making Responsive & Pixel Perfect Ui's</p>
-                </p>
-              </div>
-
-              <div className="border-2 border-gray-400 rounded-lg p-1">
-                <p className="grid-headtext">
-                As a <span className="span-class">Backend</span> Dev ⟶
-                </p>
-                <p className="grid-subtext">
-                <p>⟶ Designing RESTful APIs with CRUD operations</p>
-                <p>⟶ Architecting efficient database schemas</p>
-                <p>⟶ Implementing robust server-side validation and error handling</p>
-                <p>⟶ Integrating third-party services (Maps, OpenAI), Managing cloud-based file storage solutions</p>
-                </p>
-              </div>
-            </div> */}
-
-            {/* <div className="h-full w-full text-white text-5xl">
-              <p className="font-thin text-white text-3xl text-justify">
-                ❛❛ Connecting <span className="decoration-white">FORM & FUNCTION</span> ❜❜
-              </p>
-            </div> */}
+            <SpeechBubble>
+              <p className="text-gray-800 font-custom text-3xl">Imma introvert Yapper!!!</p>
+            </SpeechBubble>
           </div>
         </div>
       </div>
-
     </section>
-  )
+  );
 };
 
 export default TechStack;
