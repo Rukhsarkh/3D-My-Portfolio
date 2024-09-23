@@ -99,11 +99,6 @@ export const techStackes = [
       id: 13,
     },
     {
-      title: "NextAuth",
-      icon: <img src="public/TechStack/nextAuth.png"></img>,
-      id: 14,
-    },
-    {
       title: "Three.js",
       icon: <img src="public/TechStack/threejs.png"></img>,
       id: 15,
@@ -115,20 +110,6 @@ export const techStackes = [
     },
 ];
 
-export const IntrusiveThoughts = [
-  "imma Pro level Yapper",
-  "What's the Glitch ???",
-  "Wooahhh bravo ! it's new bug this time",
-  "BUG BUG BUG BUG BUG BUG BUG",
-  "What's the lore about simpson ??",
-  "Psych ! r u serious ?",
-  "i m trynna combat my urge to that next newFolder(2)",
-  "HUUU DUHHH !!!",
-  "i write without context",
-  "i know how to use Debugger, HIRE ME !",
-  "--legacy-peer-deps",
-  "Senpaiiiiiiii",
-  "DUDE !!"
-]
+
   
   
