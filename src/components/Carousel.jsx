@@ -116,7 +116,7 @@ function CarouselNavigation({ className, classNameButton, alwaysShow }) {
       >
         <ChevronLeft
           className="stroke-zinc-600 dark:stroke-zinc-50"
-          size={16}
+          size={20}
         />
       </button>
       <button
@@ -140,7 +140,7 @@ function CarouselNavigation({ className, classNameButton, alwaysShow }) {
       >
         <ChevronRight
           className="stroke-zinc-600 dark:stroke-zinc-50"
-          size={16}
+          size={20}
         />
       </button>
     </div>
@@ -167,7 +167,7 @@ function CarouselIndicator({ className, classNameButton }) {
             className={clsx(
               "h-2 w-2 rounded-full transition-opacity duration-300",
               index === i
-                ? "bg-zinc-950 dark:bg-zinc-50"
+                ? "bg-zinc-700 dark:bg-zinc-50"
                 : "bg-zinc-900/50 dark:bg-zinc-100/50",
               classNameButton
             )}
