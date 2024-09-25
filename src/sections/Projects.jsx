@@ -1,24 +1,87 @@
-import React from 'react'
-
-const Projects = () => {
+import React from "react";
+import { motion } from "framer-motion";
+import { frontendProjects} from "../constants/frontPro.jsx";
+import { fullStackProjects } from "../constants/fullStackPro.jsx";
+import { SaasProjects } from  "../constants/SaasPro.jsx";
+export default function DialogBasicOne() {
   return (
-    <main>
-        <section className='c-space my-20'>
-          <div className='grid-container'>
-          <p className='mx-auto text-white sm:text-5xl text-2xl font-medium hero_tag text-gray_gradient p-3 '>Projects</p>
-            <div className='text-center text-white font-thin mx-auto max-w-screen-sm p-4 border-2 border-white-500 rounded-md'>
-                <ul>
-                    <li>1. Property Rental Destination Platform + NLP integration</li>
-                    <li>2. Word with Anon</li>
-                    <li>3. Text Sentimental Analyzer </li>
-                    <li>4. Saas Website</li>
-                    <li>5. React Component to scale certain whole div element on screen while user scrolls to that portion</li>
-                </ul>
-            </div>
-          </div>
-        </section>
-    </main>
-  )
-}
+    <section className='mt-10 border-2'>
 
-export default Projects;
+      <div className="border-b border-white pb-5">
+        <motion.div initial={{ x: -100, opacity: 0 }} whileInView={{ x: 0, opacity:1 }} transition={{ ease: 'easeOut', duration: 0.9 }} viewport={{amount: 0.3}}>
+        <div className='text-center text-white my-10 border-2 border-white rounded-xl w-fit mx-auto p-4'>
+            <span className="text-xl sm:text-3xl font-bold text-justify tracking-wide p-2 uppercase">
+              Frontend
+            </span>
+            <span className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-blue-800 text-blue-700 text-transparent bg-clip-text">
+              Projects
+            </span>
+        </div>
+        </motion.div>
+
+        <div className='flex flex-wrap justify-center gap-5 mt-10'>
+          {
+            frontendProjects.map(({id, Project}) => 
+              (
+                <React.Fragment key={id}>
+                  {Project}
+                </React.Fragment>
+              )
+            )
+          }
+        </div>
+      </div>
+
+      <div className="border-b border-white pb-5"> 
+      <motion.div initial={{ x: 100, opacity: 0 }} transition={{ duration: 0.9, ease: 'easeOut' }} whileInView={{ x: 0, opacity: 1 }} viewport={{amount: 0.3}}>
+        <div className='text-center text-white mt-10 border-2 border-white rounded-xl w-fit p-4 mx-auto'>
+            <span className="text-xl sm:text-3xl font-bold text-justify tracking-wide p-2 uppercase">
+              Mern / Next full stack &
+            </span>
+            <p className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-blue-800 to-blue-800 text-transparent bg-clip-text">
+              Data Science Projects
+            </p>
+        </div>
+      </motion.div>
+      
+        <div className="flex flex-wrap justify-center gap-5 mt-10">
+          {
+            fullStackProjects.map(({id, Project}) =>
+              (
+                <React.Fragment key={id}>
+                  {Project}
+                </React.Fragment>
+              )
+          )
+          }
+        </div>
+      </div>
+
+      <div className="border-b border-white pb-5">
+        <motion.div initial={{ x: -100, opacity: 0 }} whileInView={{ x: 0, opacity:1 }} transition={{ ease: 'easeOut', duration: 0.9 }} viewport={{amount: 0.3}}>
+        <div className='text-center text-white mt-10 border-2 border-white rounded-xl w-fit mx-auto p-4'>
+            <span className="text-xl sm:text-3xl font-bold text-justify tracking-wide p-2 uppercase">
+              SAAS
+            </span>
+            <span className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-blue-800 text-blue-700 text-transparent bg-clip-text">
+              Projects
+            </span>
+        </div>
+        </motion.div>
+
+        <div className='flex flex-wrap justify-center gap-5 mt-10'>
+          {
+            SaasProjects.map(({id, Project}) => 
+              (
+                <React.Fragment key={id}>
+                  {Project}
+                </React.Fragment>
+              )
+            )
+          }
+        </div>
+      </div>
+
+    </section>
+  );
+}

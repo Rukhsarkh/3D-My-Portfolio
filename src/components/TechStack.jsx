@@ -10,6 +10,7 @@ import {
   CarouselItem,
   useCarousel,
 } from './Carousel.jsx';
+import {motion} from "framer-motion";
 
 export function CarouselBasic() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -40,7 +41,7 @@ export function CarouselBasic() {
       }, 2000); // Change slide every 5 seconds
     }
     return () => clearInterval(timer);
-  }, [isStop, totalSlides]);
+  }, [isStop, totalSlides]); 
 
 
   return (
@@ -54,7 +55,7 @@ export function CarouselBasic() {
           ))}
         </CarouselContent>
         {showNavigation && <CarouselNavigation />}
-        {showNavigation && <CarouselIndicator />}
+        {/* {showNavigation && <CarouselIndicator />} */}
         {showNavigation && <button className=" text-white text-2xl rounded-lg p-2 ml-0 mb-2 border-2 border-white" onClick={handlePauseResume}>{isStop ? <div className="flex flex-row"><img src="assets/pause.png" alt="pause" className="w-8 h-8"></img> &nbsp;<p>Stop</p></div> : <div className="flex flex-row"><img src="assets/play.png" alt="play" className="w-8 h-8"></img> &nbsp;<p>Start</p></div>}</button>}
       </Carousel>
     </div>
@@ -80,7 +81,18 @@ const TechStackGrid = () => {
 
 const TechStack = () => {
   return (
-    <section className="c-space my-20">
+    <section className="c-space my-20 flex flex-col border-2">
+      <motion.div initial={{ x: -100, opacity: 0 }} whileInView={{ x: 0, opacity:1 }} transition={{ ease: 'easeOut', duration: 0.9 }} viewport={{amount: 0.3}}>
+        <div className='text-center text-white border-2 border-white rounded-xl w-fit mx-auto p-4 my-10'>
+            <span className="text-xl sm:text-3xl font-bold text-justify tracking-wide p-2 uppercase">
+              Tech
+            </span>
+            <span className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-blue-800 text-blue-700 text-transparent bg-clip-text">
+              Stack
+            </span>
+        </div>
+        </motion.div>
+
       <div className="grid xl:grid-cols-2 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-6">
           <div className="grid-container bg-[url('assets/spotlight3.png')] bg-cover">

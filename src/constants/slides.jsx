@@ -7,9 +7,9 @@ export const slides = [
                 {/* <!-- Main bubble --> */}
                 <rect x="20" y="20" width="210" height="100" rx="20" ry="20" fill="#e0e0e0" stroke="#000" stroke-width="2"/>
                 {/* <!-- Tail --> */}
-                <circle cx="150" cy="150" r="15" fill="#e0e0e0" stroke="#000" stroke-width="2"/>
-                <circle cx="170" cy="180" r="10" fill="#e0e0e0" stroke="#000" stroke-width="2"/>
-                <circle cx="190" cy="200" r="8" fill="#e0e0e0" stroke="#000" stroke-width="2"/>
+                {/* <circle cx="150" cy="150" r="15" fill="#e0e0e0" stroke="#000" stroke-width="2"/> */}
+                <circle cx="150" cy="150" r="10" fill="#e0e0e0" stroke="#000" stroke-width="2"/>
+                <circle cx="170" cy="180" r="8" fill="#e0e0e0" stroke="#000" stroke-width="2"/>
                 <text x="100" y="70" font-family="spongeFont" font-size="30" fill="#000" text-anchor="middle" alignment-baseline="middle" >
                     <tspan x="120" y="50">HIRE ME !</tspan>
                     <tspan x="130" y="80">Ohh i</tspan>
