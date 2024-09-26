@@ -1,6 +1,7 @@
 import React, {
   Children,
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useRef,
@@ -89,31 +90,12 @@ function CarouselNavigation({ className, classNameButton, alwaysShow }) {
   const { index, setIndex, itemsCount } = useCarousel();
 
   return (
-    <div
-      className={clsx(
-        "pointer-events-none absolute left-[-12.5%] top-1/2 flex w-[125%] -translate-y-1/2 justify-between px-2",
-        className
-      )}
-    >
-      <button
-        type="button"
-        className={clsx(
-          "pointer-events-auto h-fit w-fit rounded-full bg-zinc-50 p-2 transition-opacity duration-300 dark:bg-zinc-950",
-          alwaysShow
-            ? "opacity-100"
-            : "opacity-0 group-hover/hover:opacity-100",
-          alwaysShow
-            ? "disabled:opacity-40"
-            : "disabled:group-hover/hover:opacity-40",
-          classNameButton
-        )}
-        disabled={index === 0}
-        onClick={() => {
+    <div className={clsx("pointer-events-none absolute left-[-12.5%] top-1 flex w-[125%] -translate-y-1/2 justify-between px-2",className)}>
+      <button type="button" className={clsx("pointer-events-auto h-fit w-fit rounded-full bg-zinc-50 p-2 transition-opacity duration-300 dark:bg-zinc-950", alwaysShow ? "opacity-100": "opacity-0 group-hover/hover:opacity-100", alwaysShow ? "disabled:opacity-40": "disabled:group-hover/hover:opacity-40", classNameButton)} disabled={index === 0} onClick={() => {
           if (index > 0) {
             setIndex(index - 1);
           }
-        }}
-      >
+        }}>
         <ChevronLeft
           className="stroke-zinc-600 dark:stroke-zinc-50"
           size={20}

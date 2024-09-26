@@ -13,7 +13,7 @@ export default function DialogBasicOne() {
             <span className="text-xl sm:text-3xl font-bold text-justify tracking-wide p-2 uppercase">
               Frontend
             </span>
-            <span className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-blue-800 text-blue-700 text-transparent bg-clip-text">
+            <span className="text-2xl sm:text-4xl font-bold text-blue-800">
               Projects
             </span>
         </div>
@@ -38,7 +38,7 @@ export default function DialogBasicOne() {
             <span className="text-xl sm:text-3xl font-bold text-justify tracking-wide p-2 uppercase">
               Mern / Next full stack &
             </span>
-            <p className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-blue-800 to-blue-800 text-transparent bg-clip-text">
+            <p className="text-2xl sm:text-4xl font-bold text-blue-800">
               Data Science Projects
             </p>
         </div>
@@ -63,7 +63,7 @@ export default function DialogBasicOne() {
             <span className="text-xl sm:text-3xl font-bold text-justify tracking-wide p-2 uppercase">
               SAAS
             </span>
-            <span className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-blue-800 text-blue-700 text-transparent bg-clip-text">
+            <span className="text-2xl sm:text-4xl font-bold text-blue-800">
               Projects
             </span>
         </div>
