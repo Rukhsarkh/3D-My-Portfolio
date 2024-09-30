@@ -5,7 +5,7 @@ import { fullStackProjects } from "../constants/fullStackPro.jsx";
 import { SaasProjects } from  "../constants/SaasPro.jsx";
 export default function DialogBasicOne() {
   return (
-    <section className='mt-10 border-2'>
+    <section className='mt-20 border-2'>
 
       <div className="border-b border-white pb-5">
         <motion.div initial={{ x: -100, opacity: 0 }} whileInView={{ x: 0, opacity:1 }} transition={{ ease: 'easeOut', duration: 0.9 }} viewport={{amount: 0.3}}>

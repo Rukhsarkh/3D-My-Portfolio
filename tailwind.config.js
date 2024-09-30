@@ -28,6 +28,9 @@ export default {
       backgroundImage: {
         terminal: "url('/assets/terminal.png')",
       },
+      animation: {
+        'slow-bounce': 'slow-bounce 3s infinite',
+      },
     },
   },
   plugins: [],
