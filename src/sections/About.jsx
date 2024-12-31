@@ -8,7 +8,7 @@ const About = () => {
   const isMobile = width < 768; //mobile breakpoint
 
   return (
-    <section className="mx-5 flex items-center justify-center p-4 bg-gradient-to-br from-green-700 to-indigo-900 rounded-xl">
+    <section className="mx-5 flex items-center justify-center p-4 bg-gradient-to-br from-green-700 to-indigo-900 rounded-xl" id="about">
       <motion.div 
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}

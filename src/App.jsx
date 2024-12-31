@@ -4,8 +4,8 @@ import Hero from './sections/Hero'
 import About from './sections/About'
 import Projects from './sections/Projects'
 import Contact from './sections/Contact'
-import TechStack from './components/TechStack'
-import './fonts.css'
+import TechStack from './sections/TechStack'
+import Footer from './sections/Footer'
 
 const App = () => {
   return (
@@ -16,6 +16,7 @@ const App = () => {
       <TechStack/>
       <Projects/>
       <Contact/>
+      <Footer/>
     </main>
   )
 }
