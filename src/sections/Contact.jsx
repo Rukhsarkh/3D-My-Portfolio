@@ -26,7 +26,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: "Rukhsar Khan",
           from_email: form.email,
-          to_email: import.meta.env.ITE_USER_EMAIL,
+          to_email: import.meta.env.VITE_USER_EMAIL,
           message: form.message,
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
