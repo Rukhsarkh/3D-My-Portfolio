@@ -122,9 +122,4 @@ export const techStackes = [
     icon: <img src="/TechStack/threejs.png"></img>,
     id: 13,
   },
-  {
-    title: "Next.js",
-    icon: <img src="/Techstack/nextjs.png"></img>,
-    id: 14,
-  },
 ];
