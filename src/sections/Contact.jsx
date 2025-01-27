@@ -29,7 +29,7 @@ const Contact = () => {
           to_email: import.meta.env.VITE_USER_EMAIL,
           message: form.message,
         },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(
         () => {
@@ -58,7 +58,7 @@ const Contact = () => {
             text: "I didn't receive your message 😢",
             type: "danger",
           });
-        }
+        },
       );
   };
 

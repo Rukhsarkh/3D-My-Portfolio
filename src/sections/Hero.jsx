@@ -15,10 +15,11 @@ import Button from "../components/Button";
 import { TextEffect } from "../components/TextEffect";
 
 const Hero = () => {
-
-  const isSmall = useMediaQuery({query: ("max-width: 440px")});
+  const isSmall = useMediaQuery({ query: "max-width: 440px" });
   const isMobile = useMediaQuery({ query: "(max-width: 832px)" });
-  const isTablet = useMediaQuery({query: ("min-width: 832px", "max-width: 1024px")});
+  const isTablet = useMediaQuery({
+    query: ("min-width: 832px", "max-width: 1024px"),
+  });
 
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
@@ -30,51 +31,53 @@ const Hero = () => {
         </p>
 
         <p className="hero_tag text-gray_gradient">
-          <TextEffect per="char" preset='fade'>
-            {
-              isMobile ? `❛❛ Full Stack Dev ❜❜`:`❛❛ Building Frontends - Backends ❜❜`
-            }
+          <TextEffect per="char" preset="fade">
+            {isMobile
+              ? `❛❛ Full Stack Dev ❜❜`
+              : `❛❛ Building Frontends - Backends ❜❜`}
           </TextEffect>
         </p>
       </div>
 
-      {/* <div className="w-full h-full absolute inset-0">
+      <div className="w-full h-full absolute inset-0">
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
-          
-              <HeroCamera isMobile={isMobile} >
-                <HackerRoom
-                  position={sizes.deskPosition}
-                  rotation={[0, -Math.PI, 0]}
-                  scale={sizes.deskScale}
-                />
-              </HeroCamera>
+            <HeroCamera isMobile={isMobile}>
+              <HackerRoom
+                position={sizes.deskPosition}
+                rotation={[0, -Math.PI, 0]}
+                scale={sizes.deskScale}
+              />
+            </HeroCamera>
 
-              <group>
-                <Target position={sizes.targetPosition}/>
-                <ReactLogo position={sizes.reactLogoPosition}/>
-                <Rings position={sizes.ringPosition}/>
-                <Cube position={sizes.cubePosition}/>
-              </group>
+            <group>
+              <Target position={sizes.targetPosition} />
+              <ReactLogo position={sizes.reactLogoPosition} />
+              <Rings position={sizes.ringPosition} />
+              <Cube position={sizes.cubePosition} />
+            </group>
 
-              <ambientLight intensity={0.5} />
+            <ambientLight intensity={0.5} />
 
-              <directionalLight intensity={0.5} position={[10, 10, 10]} />
+            <directionalLight intensity={0.5} position={[10, 10, 10]} />
 
-              <PerspectiveCamera
-                makeDefault
-                position={[0, 0, 20]}
-              ></PerspectiveCamera>
-
+            <PerspectiveCamera
+              makeDefault
+              position={[0, 0, 20]}
+            ></PerspectiveCamera>
           </Suspense>
         </Canvas>
 
         <div className="absolute left-0 right-0 bottom-7 w-full z-10 c-space ">
           <a href="#contact" className="w-fit">
-            <Button name="Let's Work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96"></Button>
+            <Button
+              name="Let's Work together"
+              isBeam
+              containerClass="sm:w-fit w-full sm:min-w-96"
+            ></Button>
           </a>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };

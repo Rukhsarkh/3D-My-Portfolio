@@ -1,26 +1,17 @@
 export const fullStackProjects = [
-    {
-        id: 1,
-        title: "CloudUp - Ai Powered Storer",
-        desc: "Cloud Up is an AI Powered Storer that helps you store your data in the cloud.",
-        image: "../../assets/cloudup.png",
-        link: "https://cloud-up-ai.vercel.app/",
-        git: "https://github.com/Rukh-Khan/CloudUp"   
-    },
-    {
-        id: 1,
-        title: "CloudUp - Ai Powered Storer",
-        desc: "Cloud Up is an AI Powered Storer that helps you store your data in the cloud.",
-        image: "../../assets/cloudup.png",
-        link: "https://cloud-up-ai.vercel.app/",
-        git: "https://github.com/Rukh-Khan/CloudUp"   
-    },
-    {
-        id: 1,
-        title: "CloudUp - Ai Powered Storer",
-        desc: "Cloud Up is an AI Powered Storer that helps you store your data in the cloud.",
-        image: "../../assets/cloudup.png",
-        link: "https://cloud-up-ai.vercel.app/",
-        git: "https://github.com/Rukh-Khan/CloudUp"   
-    }
-]
+  {
+    id: 1,
+    title: "SuperTripDotCom",
+    desc: "Full Stack Rental Destination Platform with NLP integrations. (Data science Project) ",
+    image: "../../assets/trip1.png",
+    link: "https://supertripdotcom.onrender.com",
+    git: "https://github.com/Rukhsarkh/SuperTripDotCom",
+  },
+  {
+    id: 1,
+    title: "TalkWithAnon",
+    desc: "An anonymous app to ask questions and get answers with (Ai Feature)",
+    image: "../../assets/talkanon1.png",
+    git: "https://github.com/Rukhsarkh/AMA-APP",
+  },
+];

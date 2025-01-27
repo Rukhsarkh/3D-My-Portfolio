@@ -23,12 +23,12 @@ function useClickOutside(ref, handler) {
       handler(event);
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('touchstart', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
     };
   }, [ref, handler]);
 }
@@ -48,7 +48,7 @@ function DialogProvider({ children, transition }) {
 
   const contextValue = useMemo(
     () => ({ isOpen, setIsOpen, uniqueId, triggerRef }),
-    [isOpen, uniqueId]
+    [isOpen, uniqueId],
   );
 
   return (
@@ -80,7 +80,7 @@ function DialogTrigger({ children, className, style, triggerRef }) {
         setIsOpen(!isOpen);
       }
     },
-    [isOpen, setIsOpen]
+    [isOpen, setIsOpen],
   );
 
   return (
@@ -140,12 +140,12 @@ function DialogContent({ children, className, style }) {
     if (isOpen) {
       document.body.classList.add("overflow-hidden");
       const focusableElements = containerRef.current?.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
       );
       if (focusableElements && focusableElements.length > 0) {
         setFirstFocusableElement(focusableElements[0]);
         setLastFocusableElement(
-          focusableElements[focusableElements.length - 1]
+          focusableElements[focusableElements.length - 1],
         );
         focusableElements[0].focus();
       }
@@ -205,7 +205,7 @@ function DialogContainer({ children }) {
         </>
       )}
     </AnimatePresence>,
-    document.body
+    document.body,
   );
 }
 
