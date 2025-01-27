@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { frontendProjects } from "../constants/frontPro.jsx";
 import { fullStackProjects } from "../constants/fullStackPro.jsx";
-import { SaasProjects } from "../constants/SaasPro.jsx";
 import { Eye, GitBranchIcon } from "lucide-react";
 
 const Projects = () => {
