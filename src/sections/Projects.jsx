@@ -39,8 +39,8 @@ const Projects = () => {
               <div className="p-4">
                 <h3 className="text-xl font-bold">{item.title}</h3>
                 <p className="text-gray-300 mt-2">{item.desc}</p>
-                {item.id !== 2 && (
-                  <div className="flex justify-between items-center mt-4">
+                <div className="flex justify-between items-center mt-4">
+                  {item.id !== 2 && (
                     <a
                       href={item.link}
                       target="_blank"
@@ -49,17 +49,16 @@ const Projects = () => {
                       <Eye className="mr-1" />
                       <span>View</span>
                     </a>
-
-                    <a
-                      href={item.git}
-                      target="_blank"
-                      className="flex items-center text-emerald-500 hover:text-emerald-600 transition-colors duration-300"
-                    >
-                      <GitBranchIcon className="mr-1" />
-                      <span>Source Code</span>
-                    </a>
-                  </div>
-                )}
+                  )}
+                  <a
+                    href={item.git}
+                    target="_blank"
+                    className="flex items-center text-emerald-500 hover:text-emerald-600 transition-colors duration-300"
+                  >
+                    <GitBranchIcon className="mr-1" />
+                    <span>Source Code</span>
+                  </a>
+                </div>
               </div>
             </div>
           ))}

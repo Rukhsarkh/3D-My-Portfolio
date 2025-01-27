@@ -4,7 +4,7 @@ export const frontendProjects = [
     title: "CloudUp",
     desc: "Cloud Up is an AI Powered Storer that helps you store your data in the cloud, Landing Page",
     image: "../../assets/cloudup1.png",
-    link: "https://cloud-up-ai.vercel.app/",
+    link: "https://cloud-up.vercel.app/",
     git: "https://github.com/Rukh-Khan/CloudUp",
   },
   {
