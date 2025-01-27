@@ -4,7 +4,7 @@ import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
-import TechStack2 from "./sections/TechStack2";
+import TechStack from "./sections/TechStack";
 import EveSection from "./sections/EveSection";
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
     <main className="max-w-7xl mx-auto relative">
       <Navbar />
       <Hero />
-      <TechStack2 />
+      <TechStack />
       <EveSection />
       <Projects />
       <Contact />

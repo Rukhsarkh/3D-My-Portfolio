@@ -19,16 +19,16 @@ const TechStackGrid = () => {
   );
 };
 
-const TechStack2 = () => {
+const TechStack = () => {
   return (
     <motion.div
       initial={{ x: -100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
-      transition={{ ease: "easeOut", duration: 0.9 }}
+      transition={{ ease: "easeOut", duration: 1 }}
       viewport={{ amount: 0.3 }}
       className="flex-1 flex flex-col items-center p-4"
     >
-      <div className="flex flex-col items-center gap-2 mb-8">
+      <div className="flex flex-col items-center gap-2 mb-8 mt-20">
         <p className="text-2xl sm:text-3xl font-bold text-blue-700 text-center">
           Hover Over the Icons
         </p>
@@ -77,4 +77,4 @@ const TechStack2 = () => {
   );
 };
 
-export default TechStack2;
+export default TechStack;
