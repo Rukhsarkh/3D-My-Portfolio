@@ -49,7 +49,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
     targetPosition: isSmall
       ? [-5, -10, -10]
       : isMobile
-      ? [-6, 0, -9]
+      ? [-7, -10, -10]
       : isTablet
       ? [-11, -7, -10]
       : [-13, -13, -10],
