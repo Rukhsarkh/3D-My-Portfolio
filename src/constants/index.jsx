@@ -28,31 +28,31 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
     cubePosition: isSmall
       ? [4, -5, 0]
       : isMobile
-        ? [5, -7, 0]
-        : isTablet
-          ? [5, -5, 0]
-          : [9, -5.5, 0],
+      ? [5, -7, 0]
+      : isTablet
+      ? [5, -5, 0]
+      : [9, -5.5, 0],
     reactLogoPosition: isSmall
       ? [3, 4, 0]
       : isMobile
-        ? [5, 4, 0]
-        : isTablet
-          ? [5, 4, 0]
-          : [12, 3, 0],
+      ? [5, 4, 0]
+      : isTablet
+      ? [5, 4, 0]
+      : [12, 3, 0],
     ringPosition: isSmall
       ? [-5, 7, 0]
       : isMobile
-        ? [-10, 12, 0]
-        : isTablet
-          ? [-12, 10, 0]
-          : [-24, 10, 0],
+      ? [-10, 12, 0]
+      : isTablet
+      ? [-12, 10, 0]
+      : [-24, 10, 0],
     targetPosition: isSmall
       ? [-5, -10, -10]
       : isMobile
-        ? [-8, -10, -9]
-        : isTablet
-          ? [-11, -7, -10]
-          : [-13, -13, -10],
+      ? [-8, -10, -9]
+      : isTablet
+      ? [-11, -7, -10]
+      : [-13, -13, -10],
   };
 };
 
@@ -124,7 +124,7 @@ export const techStackes = [
   },
   {
     title: "Next.js",
-    icon: <img src="public/Techstack/nextjs.png"></img>,
+    icon: <img src="/Techstack/nextjs.png"></img>,
     id: 14,
   },
 ];
