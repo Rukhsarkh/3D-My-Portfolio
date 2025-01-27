@@ -11,7 +11,7 @@ export const frontendProjects = [
     id: 2,
     title: "3D Portfolio",
     desc: "Stunning 3D portfolio website with stunning animations and interactive elements.",
-    image: "../../assets/portfolio2.png",
+    image: "../../assets/portfolio1.png",
     git: "https://github.com/Rukhsarkh/3D-My-Portfolio",
   },
 ];
