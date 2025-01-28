@@ -22,7 +22,7 @@ const TechStackGrid = () => {
 const TechStack = () => {
   return (
     <motion.div
-      initial={{ x: -100, opacity: 0 }}
+      // initial={{ x: -100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ ease: "easeOut", duration: 1 }}
       viewport={{ amount: 0.3 }}
@@ -60,7 +60,7 @@ const TechStack = () => {
         </svg>
       </div>
 
-      <div className="w-full border-b-8 shadow-2xl shadow-blue-300 sm:border-gray-500 sm:rounded-lg p-4 sm:border-b-0">
+      <div className="w-full border-b-2 shadow-2xl shadow-blue-300 sm:border-gray-500 sm:rounded-lg p-4 sm:border-b-0">
         <div className="text-center mb-8">
           <div className="text-white border-2 border-white rounded-xl w-fit mx-auto p-4">
             <span className="text-xl sm:text-3xl font-bold uppercase">
